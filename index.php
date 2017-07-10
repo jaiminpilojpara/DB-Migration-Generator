@@ -24,7 +24,7 @@ $conn = new mysqli("localhost", "root", "");
 	<div class="container">
 		<div class="form-group">
 			<div id="btncreate"></div>
-			<div ><h3 id="filecreatedmsg"></h3></div>
+			<div ><h4 id="filecreatedmsg"></h4></div>
 		</div>
 	</div>
 	<!-- File Creation btn and message -->
@@ -83,7 +83,7 @@ $(document).on('click', '#createfile', function(e){
 	url: "filecreate.php",
 	data:{tb_name:tbname, db_name:dbname},
 	success: function(data){
-		$("#filecreatedmsg").html('File Created in CreatedFiles Folder with name ' + data);
+		$("#filecreatedmsg").html('File Created in <b>CreatedFiles</b> Folder with name ' + data);
 	}
 	});
 
